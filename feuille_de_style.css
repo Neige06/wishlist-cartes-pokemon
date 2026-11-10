@@ -1,0 +1,256 @@
+
+/* GLOBAL */
+
+@font-face {
+    font-family: 'azonix';
+    src: url('fonts/azonix.ttf') format('truetype');
+}
+
+body {
+    font-family: 'bahnschrift', sans-serif;
+    margin: 0;
+    background-color: #F7F5FA;
+    cursor: url("img/curseur.png") 8 8, auto;
+}
+
+
+#page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+#page p {
+    text-align: justify;
+}
+
+
+/* TITRES */
+h1, h1 a {
+    font-family: 'azonix', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;   
+}
+
+
+
+h2 {
+    color: #393449;
+    font-size: 25px;
+    text-align: center;
+}
+
+section {
+    color: #454052;
+    font-size: 20px;
+}
+
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #655581;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: #FFFFFF;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+nav a:hover,
+footer a:hover {
+    color: #D4C9E5;
+}
+
+
+/* BOUTONS */
+.barre-recherche button, .bouton-envie, .bouton-secondaire, #bouton-envies, #bouton-partager {
+    padding: 14px;
+    border: 0;
+    border-radius: 9px;
+    background-color: #D4C9E5;
+    color: #655581;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* boutons Hover */
+.barre-recherche button:hover, .bouton-envie:hover, .bouton-secondaire:hover, #bouton-envies:hover, #bouton-partager:hover {
+    background-color: #c0b5cf;
+}
+
+
+
+
+/*Barre de recherches*/
+.recherche-cartes {
+    max-width: 760px;
+    margin: 0 auto 34px;
+    padding: 22px;
+    border-radius: 16px;
+    background: #FFFFFF;
+}
+
+
+.barre-recherche {
+    display: flex;
+    gap: 10px;
+}
+
+.barre-recherche input {
+    flex: 1;
+    padding: 13px 15px;
+    border: 1px solid #d4cde0;
+    border-radius: 9px;
+    background: #fcfbfe;
+}
+
+.barre-recherche input:focus {
+    outline: 1px solid #897BAA;
+}
+
+
+/*Ajustement des deux titres et deux boutons*/
+.titre-resultats {
+    margin: 0 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/*Titre Cartes/liste d'envie*/
+.page-cartes .titre-resultats h2 {
+    margin: 0 0 3px;
+    font-size: 25px;
+    text-align: left;
+}
+
+/*Nombre de cartes affichées*/
+.titre-resultats p {
+    color: #827b90;
+    font-size: 14px;
+    text-align: left !important;
+}
+
+
+.grille-cartes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.carte-pokemon {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #d0cad8;
+    border-radius: 13px;
+    background: #FFFFFF;
+}
+
+/*Image*/
+.carte-pokemon > img {
+    display: block;
+    box-sizing: border-box;
+    /*Carte sans image*/
+    aspect-ratio: 2.5 / 3.5;
+    padding: 12px;
+    background: #f5f1fa;
+}
+
+.infos-carte {
+    padding: 14px;
+}
+
+/*Nom Pokémon*/
+.infos-carte h3 {
+    margin: 0;
+    color: #393449;
+    font-size: 17px;
+}
+
+.infos-carte .details-carte {
+    margin: 0 0 12px;
+    color: #655581;
+    font-size: 12px !important;
+    text-align: left !important;
+}
+
+
+/* ADAPTATION AUX ÉCRANS */
+@media (max-width: 900px) {
+    .grille-cartes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #page.page-cartes {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media (max-width: 620px) {
+    #page.page-cartes {
+        padding: 82px 15px 30px;
+    }
+
+    .grille-cartes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .infos-carte {
+        padding: 10px;
+    }
+
+    .infos-carte h3 {
+        font-size: 15px;
+    }
+
+    .bouton-envie {
+        font-size: 12px;
+    }
+}
+
+
+/* PIED DE PAGE */
+footer {
+    padding: 5px;
+    background-color: #514568;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}

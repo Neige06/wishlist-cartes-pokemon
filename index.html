@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Psytigris</title>
+    <link href="feuille_de_style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+
+
+<header>
+    <nav class="sidebar">
+        <a href="index.html">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+
+        <ul>
+            <li class="liens">
+                <a href="cartes.html">Cartes</a>
+            </li>
+
+            <li class="liens">
+                <a href="profil.html">Profil</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<body>   
+    <main id="page" class="page-cartes">
+        <header>
+            <h1 id="haut"><a href="cartes.html">Beaucoup de cartes Pokémon...</a></h1>
+        </header>
+
+        <section class="recherche-cartes" aria-label="Rechercher des cartes Pokémon">
+            <label for="recherche">Rechercher un Pokémon</label>
+            <div class="barre-recherche">
+                <input id="recherche" type="search">
+                <button id="bouton-recherche" type="button">Rechercher</button>
+            </div>
+        </section>
+
+        <section class="zone-collection">
+            <div class="titre-resultats">
+                <div>
+                    <h2 id="titre-resultats">Cartes </h2>
+                    <p id="compteur-resultats">Quelques cartes pour commencer</p>
+                </div>
+                <button id="bouton-envies" class="bouton-secondaire" type="button" aria-pressed="false">Ma liste d’envies <span id="compteur-envies">0</span></button>
+                <button id="bouton-partager" type="button"> Partager ma liste </button>
+            </div>
+
+            <p id="message" class="message-cartes" role="status">Chargement des cartes…</p>
+
+            <div id="grille-cartes" class="grille-cartes"></div>
+            <div class="zone-chargement">
+                <button id="bouton-plus" class="bouton-secondaire" type="button" hidden>Charger plus de cartes</button>
+            </div>
+        </section>
+    </main>
+            </article>
+
+
+    <script src="cartes.js" defer></script>
+
+<!-- Pied de page avec contact -->
+<footer>
+    <p>
+        ©2026 Tous droits réservés. 
+    </p>
+</footer>
+</body>
+</html>
